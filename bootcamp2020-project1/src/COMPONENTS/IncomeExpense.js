@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../CONFIG/Context";
 import "../App.css";
 
-function IncomeExpense() { 
-
+function IncomeExpense() {
   const { state } = useContext(GlobalContext);
 
-  let amountArray = state?.transactions.map((transaction) => transaction.amount);
+  let amountArray = state?.transactions.map(
+    (transaction) => transaction.amount
+  );
 
   let totalIncome = 0;
   let totalExpense = 0;
@@ -18,7 +19,7 @@ function IncomeExpense() {
     }
   }
 
-  return(
+  return (
     <div className="incomeExpenseDiv">
       <div className="incomeDiv">
         <p className="IDp1">INCOME</p>
